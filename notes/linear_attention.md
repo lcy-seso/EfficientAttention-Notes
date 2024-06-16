@@ -1,4 +1,4 @@
-RFA是一种线性时间空间attention，使用random feature methods来逼近softmax，可以作为softmax的无缝替换。
+一种线性时间空间attention，使用random feature methods来逼近softmax，可以作为softmax的无缝替换。
 
 # Reference
 
