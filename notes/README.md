@@ -16,7 +16,7 @@
     - [github](https://github.com/google-research/google-research/tree/master/performer/fast_attention)
 
 - ***2021年***，[Random Feature Attention](https://arxiv.org/abs/2103.02143)
-  - [github](https://github.com/Noahs-ARK/RFA)（这个实现比较简单，适合研究和实验）
+  - [github](https://github.com/Noahs-ARK/RFA)（这个实现比较简单，作者有一个CUDA C的实验适合实验）
 
 - ***2023年***，[PolySketchFormer: Fast Transformers via Sketching Polynomial Kernels](https://arxiv.org/pdf/2310.01655)
   - [github](https://github.com/google-research/google-research/tree/master/polysketchformer)（这个优点是比较新）
@@ -49,7 +49,7 @@ Remove activations independent of inputs.
 - [2023年]，[Faster causal attention over large sequences through sparse flash attention](https://arxiv.org/pdf/2306.01160)
   - [github](https://github.com/epfml/dynamic-sparse-flash-attention/tree/main)，基于triton的实现
 
-- [Efficient content-based sparse attention with routing transformers](https://arxiv.org/pdf/2003.05997)
+- [2020年], [Efficient content-based sparse attention with routing transformers](https://arxiv.org/pdf/2003.05997)
   - [github](https://github.com/google-research/google-research/tree/master/routing_transformer)
 
 ## MQA & GQA
@@ -57,17 +57,18 @@ Remove activations independent of inputs.
 - MQA: [Fast transformer decoding: One write-head is all you need](https://arxiv.org/pdf/1911.02150)
 - [Gqa: Training generalized multi-query trans- former models from multi-head checkpoints](https://arxiv.org/pdf/2305.13245)
 
-
 ## Selected Ones
 
 - effiecient attention
   - [ ] 2018，[efficient attention](https://github.com/cmsflash/efficient-attention), 是一种linear transformer
-  - [ ] 2021，RFA
+  - [ ] ~~2021，RFA，线性时间&空间attention~~
+  - [ ] [2023] [Gated Linear Attention Transformers with Hardware-Efficient Training](https://github.com/berlino/gated_linear_attention/tree/main?tab=readme-ov-file)
+  - [ ] [2024] [Lightning Attention-2: A Free Lunch for Handling Unlimited Sequence Lengths in Large Language Models](https://arxiv.org/pdf/2401.04658), [[github]](https://github.com/OpenNLPLab/lightning-attention/tree/main)
 
 - 静态稀疏attention
-  - [ ] 2024，streaming LLM：静态稀疏attention
+  - [ ] [2024], streaming LLM：静态稀疏attention
 
 - 动态稀疏attention
-  - [ ] 2023, adaptively sparse attention: 动态稀疏attention
-  - [ ] 2021，spatten: software-hardware co-design，动态稀疏attention
-  - [ ] 2023，sparse flash attention: extend flash attention to sparse attention，动态sparse attention
+  - [ ] [2023], adaptively sparse attention: 动态稀疏attention
+  - [ ] [2021], spatten: software-hardware co-design，动态稀疏attention
+  - [ ] [2023], sparse flash attention: extend flash attention to sparse attention，动态sparse attention
