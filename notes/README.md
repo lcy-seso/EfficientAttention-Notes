@@ -60,15 +60,15 @@ Remove activations independent of inputs.
 ## Selected Ones
 
 - effiecient attention
-  - [ ] 2018，[efficient attention](https://github.com/cmsflash/efficient-attention), 是一种linear transformer
+  - [ ] ~~2018，[efficient attention](https://github.com/cmsflash/efficient-attention), 是一种linear transformer~~
   - [ ] ~~2021，RFA，线性时间&空间attention~~
   - [ ] [2023] [Gated Linear Attention Transformers with Hardware-Efficient Training](https://github.com/berlino/gated_linear_attention/tree/main?tab=readme-ov-file)
   - [ ] [2024] [Lightning Attention-2: A Free Lunch for Handling Unlimited Sequence Lengths in Large Language Models](https://arxiv.org/pdf/2401.04658), [[github]](https://github.com/OpenNLPLab/lightning-attention/tree/main)
 
 - 静态稀疏attention
-  - [ ] [2024], streaming LLM：静态稀疏attention
+  - [ ] [2024], streaming LLM：静态稀疏attention (和BigBird可以认为是pattern相同的，这篇更关心学习效果的改善）
 
-- 动态稀疏attention
+- 动态稀疏attention（**TBD**）
   - [ ] [2023], adaptively sparse attention: 动态稀疏attention
   - [ ] [2021], spatten: software-hardware co-design，动态稀疏attention
   - [ ] [2023], sparse flash attention: extend flash attention to sparse attention，动态sparse attention
