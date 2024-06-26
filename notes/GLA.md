@@ -26,8 +26,14 @@ $$o_i = \text{sum} \left( q_i * \gamma * \left(h_{t-1} * \exp \left( {gk}_i \rig
 Fig. GLA单个query/key/value的计算过程
 </p>
 
-下面的表格列出来每一步计算的形状变化：
+论文的[v3 版本](https://arxiv.org/pdf/2312.06635v3)中图对GLA layer地解释更为简洁。
 
+<p align="center">
+<img src="figures/gla_layer.png"><br>
+Fig. GLA layer
+</p>
+
+下面的表格列出来每一步计算的形状变化：
 
 ```python
 for i in range(L): # L是序列长度
@@ -42,8 +48,7 @@ for i in range(L): # L是序列长度
 |4|$h_i = h_{i-1} * v_2 + {kv}_i$|$[B,H,d_k,d_v]*[B,H,d_k,1]+[B,H,d_k,d_v] \longrightarrow [B,H,d_k,d_v]$
 |5|$o_i=\text{sum}\left( v_1 *h_i \, \text{dim}=-2 \right)$|$[B,H,d_k,1]*[B,H,d_k,d_v] \longrightarrow [B,H,d_v]$
 
-
-# Reference
+# References
 
 1. [Transformer Quality in Linear Time](https://proceedings.mlr.press/v162/hua22a/hua22a.pdf)
 1. [Sampled Softmax with Random Fourier Features](https://arxiv.org/pdf/1907.10747)
