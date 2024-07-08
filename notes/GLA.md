@@ -40,10 +40,10 @@ for i in range(L): # L是序列长度
     o_i = GLA_cell(q_i, k_i, v_i, gk_i, scale)
 ```
 
-|No.|Equation|形状映射|
-|:--:|:--|:--|
+|No.|Equation|形状映射||
+|:--:|:--|:--|:--|
 |1|$v_1 = q_i * \gamma$|$[B,H,d_k,1]*[1,] \longrightarrow [B,H,d_k,1]$|
-|2|$v_2 = \exp \left( {gk}_i \right)$|$[B,H,d_k,1] \longrightarrow [B,H,d_k,1]$
+|2|$v_2 = \exp \left( {gk}_i \right)$|$[B,H,d_k,1] \longrightarrow [B,H,d_k,1]$|这一步的exp是对映射到对数空间的gating factor进行还原|
 |3|${kv}_i = k_i \otimes v_i$  | $[B,H,d_k,1]\otimes [B,H,1,d_v]\longrightarrow [B,H,d_k,d_v]$|
 |4|$h_i = h_{i-1} * v_2 + {kv}_i$|$[B,H,d_k,d_v]*[B,H,d_k,1]+[B,H,d_k,d_v] \longrightarrow [B,H,d_k,d_v]$
 |5|$o_i=\text{sum}\left( v_1 *h_i \, \text{dim}=-2 \right)$|$[B,H,d_k,1]*[B,H,d_k,d_v] \longrightarrow [B,H,d_v]$
